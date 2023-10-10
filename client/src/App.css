@@ -1,0 +1,866 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+::-webkit-scrollbar {
+    visibility: hidden;
+}
+/*================================================*/
+/*this is for base page*/
+.base .base-navCont {
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5% 10px 10%;
+    position: fixed;
+    width: 100%;
+}
+.base .base-navCont h1 {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(9, 9, 117);
+}
+.base .base-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+}
+.base .ha {
+    display: flex;
+    gap: 40px;
+}
+.base .ha h4 {
+    cursor: pointer;
+    transition: .3s;
+}
+.base .ha h4:hover {
+    color: rgb(172, 1, 30);
+}
+.base .base-signup {
+    background: transparent;
+    color: rgb(6, 6, 73);
+    padding: 4px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid rgb(6, 6, 73);
+    transition: .3s;
+}
+.base .base-signup:hover {
+    background: rgb(4, 4, 168);
+    border: 1px solid rgb(4, 4, 168);
+    color: #fff;
+}
+.menu {
+    display: none;
+}
+.drop-menu {
+    display: none;
+}
+.lg-bg {
+    background: linear-gradient(to left, transparent, transparent, white, rgb(228, 242, 255));
+    position: absolute;
+    width: 70%;
+    height: 100%;
+}
+    /*main*/
+.base .base-main {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    background-size: cover;
+    background-image: url('../public/notebg.jpg');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    padding: 10%;
+    gap: 15px;
+}
+.base .main-cont {
+    padding: 20px 20px 20px 50px;
+    width: 100%;
+    z-index: 1;
+}
+.base .main-cont h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    color: transparent;
+    background: linear-gradient(to left, #fff,rgb(0, 0, 255), rgb(2, 2, 59), rgb(1, 1, 185), #fff);
+    -webkit-text-stroke: .3px #313131;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: ani 30s linear infinite;
+    text-shadow: 3px 3px 6px rgba(5, 2, 37, 0.333);
+    margin-bottom: 40px;
+    /* white-space: nowrap; */
+}
+@keyframes ani {
+    100% {
+        background-position: 5000px 0;
+    }
+}
+.base .main-btn {
+    background: rgb(148, 11, 34);
+    border: 1px solid rgb(148, 11, 34);
+    color: #fff;
+    padding: 5px 16px;
+    font-size: 17px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px #0005;
+    margin-top: 12px;
+    transition: .3s background;
+}
+.base .main-btn:hover {
+    background: white;
+    border: 1px solid rgb(148, 11, 34);
+    color: rgb(148, 11, 34);
+}
+.base .note-pic {
+    background: none;
+    width: 250px;
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+    /*about*/
+.base .about-cont {
+    padding: 20px 20px 20px 50px;
+    width: 100%;
+    z-index: 1;
+}
+.base .about-cont h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+.base .base-main p {
+    font-size: 16px;
+    width: 80%;
+    margin-left: 8px;
+}
+/*for small screen*/
+@media (max-width: 650px) {
+    .base .base-main {
+        padding: 10px;
+    }
+    .base .ha h4 {
+        padding-right: 30px;
+    }
+    .base .main-cont {
+        padding: 20px;
+        margin-right: 0;
+        width: auto;
+    }
+    .base .about-cont {
+        padding:20px;
+        margin: 0 auto;
+        width: 300px;
+    }
+    .base .base-nav {
+        display: flex;
+        align-items: center;
+        width:auto;
+    }
+    .base .ha {
+        display: flex;
+        gap: 0;
+        margin-right: 5px;
+    }
+    .base .ha h4 {
+        margin-right: 10px;
+    }
+    .base .base-signup {
+        padding: 3px 8px;
+        border-radius: 30px;
+        font-size: 15px;
+    }
+    .base .note-pic {
+        display: none;
+    }
+    .base .main-cont h1, .base .about-cont h1 {
+        font-size: 50px;
+    }
+}
+@media (max-width: 420px) {
+    .base .base-nav {
+        display: none;
+    }
+    .base .base-navCont h1 {
+        font-size: 20px;
+    }
+    .menu {
+        display: block;
+        margin-right: 10px;
+    }
+    .drop-menu {
+        display: block;
+        position: absolute;
+        background: linear-gradient(to bottom, transparent, rgb(223, 240, 255));
+        width: 100%;
+        top: 42px;
+        align-items: center;
+        padding: 10px;
+    }
+    .drop-menu h4 {
+        padding: 4px 8px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .drop-menu h4:hover {
+        color: rgb(88, 2, 2);
+    }
+    .drop-menu .signup {
+        padding: 3px 8px;
+        border-radius: 10px;
+        margin-top: 20px;
+        background: none;
+        border: 1px solid rgb(1, 1, 66);
+        color: rgb(1, 1, 66);
+        text-align: center;
+        cursor: pointer;
+        transition: .2s;
+    }
+    .drop-menu .signup:hover {
+        background: rgb(1, 1, 66);
+        color: white;
+        border: 1px solid rgb(1, 1, 66);
+    }
+    .drop-menu .icon {
+        margin-right: 10px;
+    }
+}
+
+
+
+
+
+
+/*================================================*/
+/*from auth*/
+.auth {
+    background: url("https://media.istockphoto.com/id/1494274146/photo/dried-hydrangea-flowers-on-a-blue-background.jpg?s=612x612&w=0&k=20&c=q8_yb-mFP-p72RgkuPLo_2BIMhFbDknCqcLGtlAJC5Q=");
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.auth form {
+    backdrop-filter: blur(5px);
+    filter: brightness(.9);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+    border-radius: 35px;
+    border: 1px solid rgb(125, 150, 165);
+    box-shadow: 0 0 50px #0009;
+}
+.auth h1 {
+    padding-bottom: 20px;
+    color: rgb(6, 6, 51);
+}
+.auth input {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 3px 10px;
+    border-bottom: 1px solid rgb(6, 6, 51);
+    color: #0a0a0a;
+    outline: none;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.auth input::placeholder {
+    color: rgb(104, 106, 126);
+}
+.auth p {
+    margin: 20px 0 10px; 
+}
+.auth p i {
+    font-size: 15px;
+}
+.auth p span {
+    color: rgb(6, 6, 51);
+    cursor: pointer;
+    transition: .2s;
+}
+.auth p span:hover {
+    color: rgb(148, 11, 11);
+}
+.auth button {
+    background: rgb(2, 2, 124);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .2s;
+}
+.auth button:hover {
+    background: rgb(1, 1, 204);
+}
+@media (max-width: 400px) {
+    .auth form {
+        padding: 20px 30px;
+    }
+    .auth p {
+        margin: 20px 0 10px;
+        font-size: 15px;
+    }
+    .auth p i {
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+/*============================================*/
+/*main dashboard*/
+    /*header*/
+.main-headerCont {
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5% 10px 10%;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    z-index: 1;
+    box-shadow: 1px 2px 8px #0003;
+}
+.main-headerCont h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(9, 9, 117);
+}
+.main {
+    background: url("https://images.unsplash.com/photo-1509624776920-0fac24a9dfda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.main .header-leftCont span {
+    font-size: 13px;
+    color: #4d4d4d;
+    margin-right: 15px;
+}
+.main .header-leftCont {
+    display: flex;
+    align-items: center;
+}
+.main .profile {
+    width: 30px;
+    height: 30px; 
+    background: rgb(165, 162, 162);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .profile .user-icon {
+    font-size: 16px;
+    color: rgb(211, 211, 211);
+    margin-bottom: 3px;
+}
+.main .profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+    /*main top*/
+.main .main-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.main .main-top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 15px;
+    padding: 60px 10px 20px 10px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.main .main-top h1 {
+    color: rgb(117, 0, 20);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main .search {
+    background: transparent;
+    border: none;
+    padding: 3px 6px;
+    border-bottom: 1px solid #030157;
+    font-size: 16px;
+    margin-top: 15px;
+    outline: none;
+}
+/*left side*/
+.left-side {
+    width: 100%;
+}
+.left-side.blur-active {
+    filter: blur(2px);
+}
+/*right side*/
+.right-side {
+    padding: 10px 20px;
+    position: fixed;
+    right: 0;
+    top: 60px;
+    width: 35%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(to top right, rgb(225, 241, 255), white);
+    border: 1px solid rgb(70, 6, 6);
+    border-top: none;
+}
+.right-side h4 {
+    color: rgb(49, 49, 49);
+    font-size: 16px;
+    padding: 10px 10px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.right-side h4:hover {
+    background: rgb(210, 230, 247);
+    border-radius: 8px;
+    padding-left: 20px;
+}
+.right-side .logout {
+    margin-top: 30px;
+    background: rgb(128, 61, 61);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    text-align: center;
+}
+.right-side .logout:hover {
+    background: rgb(151, 86, 86);
+    padding-left: 10px;
+    transition: .2s;
+}
+.right-side .manage-acc-icon, .moon-icon {
+    color: rgb(22, 18, 59);
+    margin-right: 10px;
+}
+.right-side .logout-icon {
+    margin-right: 10px;
+}
+    /*main body - note*/
+.note-cont {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 100%;
+    gap: 1rem;
+}
+.my-note {
+    background: linear-gradient(to bottom left,  lightblue, aliceblue);
+    padding: 10px;
+    border-radius: 30px;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 4px 8px #0005;
+    margin: 0 auto;
+    align-items: center;
+}
+.my-note .txt-title {
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 14px;
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
+    background: rgb(176, 189, 201);
+    outline: none;
+    margin-bottom: 10px;
+    box-shadow: inset 1px 2px 4px #0002;
+}
+.my-note .txt-note {
+    background: rgb(229, 239, 248);
+    border: none;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: inset 1px 1px 3px #0002, 1px 2px 4px #0002;
+    outline: none;
+    font-size: 16px;
+}
+.my-note .btn-save {
+    background: rgb(4, 4, 75);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 2px 7px;
+    margin-right: 8px;
+}
+.my-note .btn-save:hover {
+    background: rgb(25, 25, 139);
+}
+.my-note .btn-cancel {
+    background: rgb(92, 92, 92);
+    color: rgb(218, 218, 218);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 2px 4px;
+}
+.my-note .btn-cancel:hover {
+    background: rgb(134, 58, 58);
+}
+.my-note h3 {
+    text-align: center;
+    padding: 20px 0;
+    color: rgb(87, 20, 32);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.my-note p {
+    background: rgb(229, 241, 250);
+    padding: 10px;
+    width: 300px;
+    height: 100%;
+    border-radius: 20px;
+    color: rgb(51, 51, 51);
+}
+.my-note .bot-note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px 0 10px;
+    width: 300px;
+}
+.bot-note span {
+    font-size: 13px;
+    color: rgb(148, 148, 148);
+}
+.my-note .delete-icon {
+    margin: 0 20px;
+    cursor: pointer;
+}
+.my-note .update-icon {
+    cursor: pointer;
+}
+.my-note .delete-icon:hover {
+    color: red;
+    transition: .2s;
+}
+.my-note .update-icon:hover {
+    color: rgb(17, 17, 134);
+    transition: .2s;
+}
+
+.add-note {
+    background: rgb(182, 212, 240);
+    padding: 10px;
+    border-radius: 30px;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 3px 6px #0005;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .2s;
+}
+.add-note:hover {
+    background: rgb(161, 188, 212);
+}
+.add-note .plus {
+    font-size: 100px;
+    color: gray;
+}
+.add-note .add {
+    color: rgb(53, 52, 52);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.create-note {
+    background: rgb(182, 212, 240);
+    padding: 20px 10px 10px 10px;
+    border-radius: 30px;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 3px 8px #0007;
+    margin: 0 auto;
+}
+.create-note .title {
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
+    background: rgb(176, 189, 201);
+    outline: none;
+    margin-bottom: 10px;
+    box-shadow: inset 1px 2px 4px #0002;
+}
+.create-note .text-note {
+    background: rgb(229, 239, 248);
+    border: none;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: inset 1px 1px 3px #0002, 1px 2px 4px #0002;
+    outline: none;
+    font-size: 16px;
+}
+.create-note .bot-btn {
+    padding: 10px 20px 0 0;
+    align-self: end;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.create-note .save, .cancel {
+    background: rgb(147, 147, 150);
+    border: none;
+    color: white;
+    padding: 4px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+.create-note .save:hover {
+    background: rgb(75, 96, 165);
+
+}
+.create-note .cancel:hover {
+    background: rgb(143, 70, 82);
+}
+/*manage account*/
+.manage-acc {
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 60px;
+    width: 37%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(to top right, lightblue, rgb(225, 241, 255), white);
+    border: 1px solid rgb(100, 3, 16);
+    border-top: none;
+    box-shadow: inset 2px -5px 20px #0002;
+}
+.manage-acc .profile-pic {
+    background: rgb(151, 151, 151);
+    height: 150px;
+    width: 150px;
+    margin: 10px auto;
+    border-radius: 50%;
+    position: relative;
+}
+.profile-pic .update-pic {
+    position: absolute;
+    right:7px;
+    top: 7px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.manage-acc .update {
+    font-size: 14px;
+}
+.manage-acc .save-prof:hover {
+    background: rgb(41, 41, 126);
+}
+.manage-acc .prof-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.manage-acc .prof-cont .prof-img {
+    border-radius: 50%;
+    box-shadow: 0 0 25px #0007;
+    width: 195px;
+    height: 195px;
+    border: 1px solid #646262;
+}
+.manage-acc .prof-cont .pic-update-icon {
+    position: absolute;
+    margin-left: 165px;
+    margin-bottom: 165px;
+    font-size: 22px;
+    cursor: pointer;
+    color: rgb(61, 60, 60);
+}
+.manage-acc .prof-cont .save-prof-btn {
+    background: rgb(1, 1, 87);
+    border: none;
+    color: white;
+    padding: 3px 6px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 120px;
+    margin-right: 150px;
+}
+.manage-acc .prof-cont .save-prof-btn:hover {
+    background:rgb(17, 17, 158);
+}
+.manage-acc .prof-cont .cancel-prof-btn {
+    background: rgb(109, 109, 109);
+    border: none;
+    color: rgb(235, 235, 235);
+    padding: 2px 6px 3px 6px;
+    font-size: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 150px;
+}
+.manage-acc .prof-cont .cancel-prof-btn:hover {
+    background:rgb(143, 14, 14);
+}
+.manage-acc .prof-cont .save-prof-pic {
+    background: rgb(2, 2, 94);
+    border: rgb(2, 2, 94);
+    color: white;
+    font-size: 16px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    position: absolute;
+    margin-left: 175px;
+    margin-bottom: 175px;
+    cursor: pointer;
+}
+.manage-acc .prof-cont .save-prof-pic:hover {
+    background: rgb(15, 15, 136);
+}
+.manage-acc .user-icon {
+    color: rgb(211, 211, 211);
+    background: rgb(165, 162, 162);
+    border-radius: 50%;
+    padding: 20px 40px 40px 40px;
+    font-size: 130px;
+}
+.manage-acc .prof-cont p {
+    margin-top: 10px;
+    font-size: 22px;
+    color: rgb(59, 59, 59);
+}
+.manage-acc .div { 
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 0 20px;
+}
+.manage-acc .div.one {
+    margin-top: 18px;
+}
+.manage-acc .div .update {
+    cursor: pointer;
+    color: rgb(133, 131, 131);
+}
+.manage-acc .name {
+    color: rgb(41, 40, 40);
+    font-size: 17px;
+}
+.manage-acc .div label {
+    color: gray;
+    margin-bottom: 3px;
+}
+.manage-acc .p {
+    color: rgb(37, 37, 37);
+    padding-left: 8px;
+    font-size: 18px;
+    margin: 0 20px;
+}
+.manage-acc .inp {
+    font-size: 16px;
+    padding: 2px 8px;
+    width: 70%;
+    margin: 0 20px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #2b2b2b;
+    outline: none;
+}
+.manage-acc .div button, .prof-btn {
+    background: rgb(17, 0, 80);
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.manage-acc .div button:hover {
+    background: #0a086e;
+}
+.manage-acc .arrow-left-icon {
+    color: rgb(18, 2, 63);
+    cursor: pointer;
+    font-size: 20px;
+}
+.manage-acc .div .cancel-btn {
+    color: rgb(119, 97, 97);
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.manage-acc .div .cancel-btn:hover {
+    color: rgb(199, 0, 0);
+}
+/*for small screen*/
+@media (max-width: 980px) {
+    .right-side {
+        width: 50%;
+    }
+    .manage-acc {
+        width: 50%;
+    }
+}
+@media (max-width: 530px) {
+    .right-side {
+        width: 100%;
+        backdrop-filter: blur(11px);
+    }
+    .manage-acc {
+        width: 100%;
+    }
+    .my-note, .note-cont .add-note, .create-note {
+        width: 250px;
+        height: 300px;
+    }
+    .note-cont .create-note {
+        width: 250px;
+    }
+    .create-note .title {
+        width: 100%;
+    }
+    .create-note .text-note {
+        width: 100%;
+    }
+}
