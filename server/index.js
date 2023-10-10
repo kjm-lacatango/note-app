@@ -7,21 +7,6 @@ const bcrypt = require('bcryptjs')
 require('dotenv').config()
 const multer = require('multer')
 const path = require('path')
-// const bodyParser = require('body-parser')
-// const cookieParser = require('cookie-parser')
-// const session = require('express-session')
-
-// const jwt = require('jsonwebtoken')
-
-// app.use(bodyParser.urlencoded({extended: true}))
-// app.use(cookieParser())
-// app.use(session({
-//     key: 'userId',
-//     secret: 'subscribe',
-//     resave: false,
-//     saveUninitialized: false,
-//     cookie: { expires: 60 * 60 * 24 }
-// }))
 
 app.use(cors({
     origin: ['http://localhost:3000'],
